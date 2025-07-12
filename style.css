@@ -1,0 +1,261 @@
+@font-face{
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root
+{
+    --icons-white: invert(100%) sepia(100%) saturate(2%) hue-rotate(331deg) brightness(104%) contrast(101%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:"sidebar header" "sidebar main-content" ;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 130px auto;
+    font-family: "Roboto", sans-serif;
+}
+/* sidebar */
+.sidebar
+{
+background-color: rgb(91, 208, 248);
+grid-area: sidebar;
+display: grid;
+grid-template-rows: 10% 40% 30%;
+gap: 1rem;
+}
+.dashboard
+{
+    display: flex;
+    padding: 1rem;
+    gap: 8px;
+    align-items: center;
+    color: white;
+}
+.sidebar img{
+    width: 35px;
+    filter: var(--icons-white)
+}
+
+.side-nav img,.side-setting img
+{
+    width: 20px;
+}
+
+.side-nav, .side-setting
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    color: white;
+    margin-left: 8px;
+}
+
+/* header */
+.search-container
+{
+    display: flex;
+    align-items: center;
+}
+.search-container input {
+  width: 80%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+.search-container img{
+    width: 30px;
+    margin-left: 2rem;
+}
+
+.user-home
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 1rem;
+}
+
+.img-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img
+{
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.notif-tab
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.notif-tab img
+{
+    width: 25px;
+}
+
+.notif-tab img:last-of-type
+{
+    width: 30px;
+    border-radius: 50px;
+    border: 1px solid black;
+    padding: 3px;
+}
+.header-control
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.header-control button
+{
+    padding: 8px 16px;
+    background-color: rgb(91, 208, 248);
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-weight: 400;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+/* Main content */
+.your-project
+{
+    padding: 1rem;
+}
+.projects-container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.projects{
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-left: 8px solid goldenrod;
+}
+.projects-text p:first-of-type
+{
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+.projects-text p:last-of-type
+{
+    font-size: small;
+}
+.projects-text
+{
+    padding: 8px;
+    margin-bottom: 2rem;
+}
+.projects-img-container
+{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: 8px;
+    cursor: pointer;
+}
+.projects-img-container img
+{
+    width: 20px;
+}
+
+.announcement
+{
+    width: 90%;
+    padding: 1rem;
+}
+.announce-container{
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+h5+p
+{
+    margin-bottom: 8px;
+    font-size: 8px;
+}
+.trending{
+    padding: 1rem;
+}
+.trending-container
+{
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 6px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.trending-icons
+{
+    display: flex;
+    gap: 8px;
+}
+
+.trending-icons img
+{
+    box-sizing: content-box;
+    width: 20px;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.header
+{
+    background-color: white;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-content
+{
+    background-color: gainsboro;
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 75% auto;
+    grid-template-rows: 1fr;
+}
+
+.your-project
+{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
